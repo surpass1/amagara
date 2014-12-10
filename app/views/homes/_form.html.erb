@@ -1,0 +1,52 @@
+<div class="container">
+<%= form_for @home, :html => { :class => "form-horizontal home" } do |f| %>
+
+    <% if @home.errors.any? %>
+    <div id="error_expl" class="panel panel-danger">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= pluralize(@home.errors.count, "error") %> prohibited this home from being saved:</h3>
+      </div>
+      <div class="panel-body">
+        <ul>
+        <% @home.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    </div>
+  <% end %>
+
+  <div class="control-group">
+    <%= f.label :title, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :title, :class => 'form-control' %>
+    </div>
+    <%= error_span(@home[:title]) %>
+  </div>
+  
+  <div class="control-group">
+    <%= f.label :description, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_area :description, :class => 'form-control' %>
+    </div>
+    <%= error_span(@home[:description]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :avatar, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.file_field :avatar, :class => 'form-control' %>
+    </div>
+    <%= error_span(@home[:avatar]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :category, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.select :category, options_for_select(["introduction", "ministry", "donation", "news"]) %>
+    </div>
+    <%= error_span(@home[:category]) %>
+  </div><br/>
+  <%= f.submit nil, :class => 'btn btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+            homes_path, :class => 'btn btn-default' %>
+
+<% end %>
