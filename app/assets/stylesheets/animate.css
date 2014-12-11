@@ -41,16 +41,16 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 }
 .mine {
     width: 300px;
-    height: 230px;
+    height: 240px;
     overflow: hidden; /* contain images within thumbnail boundaries */
     border: 2; /* removes Bootstrap's default border */
     border-color: #884500;
-    box-shadow: 0 12px 12px -10px #c4c4c4;
+    box-shadow: 2 12px 12px -10px #c4c4c4;
     -webkit-box-shadow: 0 17px 22px -20px #c4c4c4;
     -moz-box-shadow: 0 12px 12px -10px #c4c4c4;
 }
 .mine img { width:100%; height:auto; } /* to keep proportions */
-.mine p { text-align: center; padding: 10px; } 
+.mine p { text-align: center; padding: 10px; background-color: #884500; color: #fff;} 
 
 .thumbnail {
     width: 300px;

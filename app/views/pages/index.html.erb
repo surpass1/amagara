@@ -122,30 +122,38 @@
         <span class="glyphicon glyphicon-chevron-left"></span>
     </a>
     <a class="carousel-control right" href="#myCarousel" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right"></span>
+        <span class="fa fa-chevron-right"></span>
     </a>
 </div>
 
 <div class="jumbotron">
-    
-    <% @homes.each do |h|%>
-        <div class="container " align="center">
-            <h2><%= h.title %></h2>
-            <p class="lead"><%= h.description %></p>
+    <div class="row">
+        <div class="col-md-8 col-lg-8 ">
+            <% @homes.each do |h|%>
+                <div class="container ">
+                    <h2  align="center"><%= h.title %></h2>
+                    <p class="lead"><%= h.description %></p>
+                </div>
+            <% end %>
         </div>
-    <% end %>
+        <div class="col-md-4 col-lg-4 ">
+            <iframe src="http://player.vimeo.com/video/88617114?title=0&byline=0&portrait=0&color=00b952" width="971" height="228" frameborder="0"></iframe>
+        </div>
+    </div>
  
 </div>
 <div class="container">
     <div class="row">
         <% @ministry.in_groups_of(4, false) do |four|%>
             <% four.each do |k| %>
-                <div class="col-lg-3 mine">
-                <h5><%= k.title %></h5>
-                <%= image_tag k.avatar.url(:medium) %>
+                <div class="col-md-3 col-lg-3 mine">
+                <p><%= k.title %></p>
+                <%= image_tag k.avatar.url(:medium), :class => "img-rounded" %>
                 </div>
             <% end %>
         <% end %>
     </div>
-  
+    <div class="row">
+       cvghsac cj,dcgdsc  cbdjc,vdsccbdsc sdh cd sbcvds cxshcvjdsc
+    </div>
 </div>
