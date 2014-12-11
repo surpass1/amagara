@@ -9,76 +9,34 @@
     <!-- Carousel items -->
     <div class="carousel-inner">
         <div class="item active">
-            <ul class="thumbnails">
-                    <li class="col-lg-3 lead">
-                        <div class="thumbnail">
-                            <%= image_tag("p.PNG")%>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-7 col-lg-7 ">
+                        <% @homes.each do |h|%>
+                            <h1><%= h.title %></h1>
+                            <p class="lead"><%= h.description %></p>
+                            
+                            <p><a class="btn btn-lg btn-warning col-md-6">Help a child, Donate now...</a></p>
+                        
+                    </div>
+                    <div class="col-md-5 col-lg-5 ">
+                        <div class="" style="margin-top:30px;">
+                                <%= image_tag h.avatar.url, :size=>"500x260", :class => "img-rounded" %>
+                            <% end %>
                         </div>
-                        <p>Another caption<br>
-                        <small class="red">$19.99</small><br>
-                        <a href="#" class="btn btn-success">Buy Now</a></p>
-                    </li>
-                    <li class="col-lg-3">
-                        <div class="thumbnail">
-                            <%= image_tag("p.PNG")%>
-                        </div>
-                        <p>Another caption<br>
-                        <small class="red">$19.99</small><br>
-                        <a href="#" class="btn btn-success">Buy Now</a></p>
-                    </li>
-                    <li class="col-lg-3">
-                        <div class="thumbnail">
-                            <%= image_tag("p.PNG")%>
-                        </div>
-                        <p>Another caption<br>
-                        <small class="red">$19.99</small><br>
-                        <a href="#" class="btn btn-success">Buy Now</a></p>
-                    </li>
-                    <li class="col-lg-3">
-                        <div class="thumbnail">
-                            <%= image_tag("p.PNG")%>
-                        </div>
-                        <p>Another caption<br>
-                        <small class="red">$19.99</small><br>
-                        <a href="#" class="btn btn-success">Buy Now</a></p>
-                    </li>
-                </ul>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="item">
-            <ul class="thumbnails">
-                    <li class="col-lg-3">
-                        <div class="thumbnail">
-                            <%= image_tag("p.PNG")%>
-                        </div>
-                        <p>Another caption<br>
-                        <small class="red">$19.99</small><br>
-                        <a href="#" class="btn btn-success">Buy Now</a></p>
-                    </li>
-                    <li class="col-lg-3">
-                        <div class="thumbnail">
-                            <%= image_tag("p.PNG")%>
-                        </div>
-                        <p>Another caption<br>
-                        <small class="red">$19.99</small><br>
-                        <a href="#" class="btn btn-success">Buy Now</a></p>
-                    </li>
-                    <li class="col-lg-3">
-                        <div class="thumbnail">
-                            <%= image_tag("p.PNG")%>
-                        </div>
-                        <p>Another caption<br>
-                        <small class="red">$19.99</small><br>
-                        <a href="#" class="btn btn-success">Buy Now</a></p>
-                    </li>
-                    <li class="col-lg-3">
-                        <div class="thumbnail">
-                            <%= image_tag("p.PNG")%>
-                        </div>
-                        <p>Another caption<br>
-                        <small class="red">$19.99</small><br>
-                        <a href="#" class="btn btn-success">Buy Now</a></p>
-                    </li>
-                </ul>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-lg-12 ">
+                        <%= image_tag("header image.PNG", :size=>"1150x200") %>
+                    </div>
+                </div>
+            </div>
+                    
         </div>
         <div class="item">
             <ul class="thumbnails">
@@ -119,7 +77,7 @@
     </div>
     <!-- Carousel nav -->
     <a class="carousel-control left" href="#myCarousel" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left"></span>
+        <span class="fa fa-chevron-left"></span>
     </a>
     <a class="carousel-control right" href="#myCarousel" data-slide="next">
         <span class="fa fa-chevron-right"></span>
@@ -129,10 +87,10 @@
 <div class="jumbotron">
     <div class="row">
         <div class="col-md-8 col-lg-8 ">
-            <% @homes.each do |h|%>
-                <div class="container ">
-                    <h2  align="center"><%= h.title %></h2>
-                    <p class="lead"><%= h.description %></p>
+            <% @aids.each do |h|%>
+                <div class="container text-muted ">
+                    <h2><%= h.title %></h2>
+                    <%= h.description %>
                 </div>
             <% end %>
         </div>
@@ -140,7 +98,6 @@
             <iframe src="http://player.vimeo.com/video/88617114?title=0&byline=0&portrait=0&color=00b952" width="971" height="228" frameborder="0"></iframe>
         </div>
     </div>
- 
 </div>
 <div class="container">
     <div class="row">
@@ -153,7 +110,5 @@
             <% end %>
         <% end %>
     </div>
-    <div class="row">
-       cvghsac cj,dcgdsc  cbdjc,vdsccbdsc sdh cd sbcvds cxshcvjdsc
-    </div>
+    
 </div>

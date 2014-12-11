@@ -8,14 +8,21 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <style type="text/css">
+    body{
+      font-size: 160%;
+    }
+  </style>>
 </head>
 <body>
 <%= render :partial => 'layouts/header' %>
 
 <%= yield %>
+
+<%= render :partial => 'layouts/footer' %>
 <script type="text/javascript">
   $(document).ready(function() {
-    $('.carousel').carousel({interval: 7000});
+    $('.carousel').carousel({interval: 15000});
   });
 </script>
 <script>
