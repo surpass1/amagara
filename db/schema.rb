@@ -11,7 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141210155031) do
+ActiveRecord::Schema.define(version: 20141211143031) do
+
+  create_table "abouts", force: true do |t|
+    t.string   "title"
+    t.string   "category"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+  end
 
   create_table "faqs", force: true do |t|
     t.text     "question"
@@ -31,6 +43,30 @@ ActiveRecord::Schema.define(version: 20141210155031) do
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
+  end
+
+  create_table "ministries", force: true do |t|
+    t.string   "title"
+    t.string   "category"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
+  end
+
+  create_table "news_faqs", force: true do |t|
+    t.string   "title"
+    t.string   "category"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   create_table "users", force: true do |t|

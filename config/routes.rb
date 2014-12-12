@@ -1,10 +1,25 @@
 Rails.application.routes.draw do
+  resources :abouts
+
+  resources :news_faqs
+
+  resources :ministries
+
   mount RailsAdmin::Engine => '/amagara', as: 'rails_admin'
   resources :homes
 
   root 'pages#index'
 
   devise_for :users
+
+  get "pages/children"
+  get "pages/descipleship"
+  get "pages/education"
+  get "pages/vocational"
+  get "pages/news"
+  get "pages/faqs"
+  get "pages/about"
+  get "pages/who"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
