@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/amagara', as: 'rails_admin'
   resources :homes
 
-  root 'pages#index'
+  root :to=>'pages#index'
 
   devise_for :users
 
